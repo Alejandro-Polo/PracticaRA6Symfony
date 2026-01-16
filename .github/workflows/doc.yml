@@ -23,14 +23,16 @@ jobs:
         with:
           php-version: '8.2'
 
-      - name: Install PHPDocumentor globally
-        run: composer global require phpdocumentor/phpdocumentor:^2.9
-
-      - name: Add Composer global bin to PATH
-        run: echo "$HOME/.composer/vendor/bin" >> $GITHUB_PATH
+      - name: Install PHPDocumentor 
+        run: 
+          wget https://phpdoc.org/phpDocumentor.phar
+          chmod +x phpDocumentor.phar
 
       - name: Generate documentation
-        run: phpdoc -d src -t docs
+        run: |
+          php phpDocumentor.phar -c phpdoc.xml \
+          --name="Alejandro-Polo/PracticaRA6Symfony" \
+          --ignore-composer.json
 
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
