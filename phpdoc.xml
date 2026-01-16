@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<phpdocumentor>
+  <title>Documentación API Symfony - Artículos</title>
+
+  <paths>
+    <directory>src</directory>
+  </paths>
+
+  <parser>
+    <target>docs</target>
+  </parser>
+
+  <transformer>
+    <target>docs</target>
+  </transformer>
+</phpdocumentor>
