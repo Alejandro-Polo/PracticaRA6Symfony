@@ -24,13 +24,13 @@ jobs:
           php-version: '8.2'
 
       - name: Install PHPDocumentor globally
-        run: composer global require phpdocumentor/phpdocumentor
+        run: composer global require phpdocumentor/phpdocumentor:^2.9
 
       - name: Add Composer global bin to PATH
         run: echo "$HOME/.composer/vendor/bin" >> $GITHUB_PATH
 
       - name: Generate documentation
-        run: phpdoc src --target docs
+        run: phpdoc -d src -t docs
 
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
