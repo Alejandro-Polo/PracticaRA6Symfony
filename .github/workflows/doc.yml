@@ -30,7 +30,7 @@ jobs:
         run: echo "$HOME/.composer/vendor/bin" >> $GITHUB_PATH
 
       - name: Generate documentation
-        run: phpdoc
+        run: phpdoc -c phpdoc.xml
 
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
