@@ -3,9 +3,9 @@
 
   <title>Documentación API Symfony - Artículos</title>
 
-  <paths>
-    <directory>src</directory>
-  </paths>
+  <files>
+    <target>src</target>
+  </files>
 
   <parser>
     <target>docs</target>
