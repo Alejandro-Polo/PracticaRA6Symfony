@@ -1,15 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<phpdocumentor
-    configVersion="3"
-    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xsi:noNamespaceSchemaLocation="https://docs.phpdoc.org/latest/phpdoc.xsd"
->
+<phpdocumentor>
 
   <title>Documentación API Symfony - Artículos</title>
 
-  <files>
+  <paths>
     <directory>src</directory>
-  </files>
+  </paths>
 
   <parser>
     <target>docs</target>
