@@ -24,10 +24,12 @@ jobs:
           php-version: '8.2'
 
       - name: Install PHPDocumentor 
-        run: wget https://phpdoc.org/phpDocumentor.phar && chmod +x phpDocumentor.phar
+        run: |
+          wget https://phpdoc.org/phpDocumentor.phar
+          chmod +x phpDocumentor.phar
 
       - name: Generate documentation
-        run: php phpDocumentor.phar -c phpdoc.xml --name="Alejandro-Polo/PracticaRA6Symfony" --ignore-composer.json
+        run: php phpDocumentor.phar -d src -t docs
 
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
