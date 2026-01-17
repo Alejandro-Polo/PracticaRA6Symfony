@@ -32,7 +32,7 @@ jobs:
         run: mkdir -p docs
 
       - name: Generate documentation
-        run: php phpDocumentor.phar -d src -t docs --ignore vendor
+        run: php phpDocumentor.phar run -d src -t docs --ignore vendor
 
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
